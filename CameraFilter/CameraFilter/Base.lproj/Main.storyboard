@@ -21,21 +21,25 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="672"/>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLR-xk-OvU">
-                                <rect key="frame" x="168" y="790" width="78" height="30"/>
+                                <rect key="frame" x="168" y="822" width="78" height="30"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Apply Filter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="applyFilterOnButtonTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="hne-Do-xzM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bLR-xk-OvU" secondAttribute="bottom" constant="10" id="1Mk-ll-Yrn"/>
                             <constraint firstItem="nyX-fG-tav" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6ej-5x-bOs"/>
                             <constraint firstItem="bLR-xk-OvU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6tu-aI-iaq"/>
                             <constraint firstItem="nyX-fG-tav" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="7j0-E6-dsH"/>
                             <constraint firstItem="nyX-fG-tav" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.75" id="IHx-Rs-WXR"/>
                             <constraint firstItem="nyX-fG-tav" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OR6-cA-7kZ"/>
-                            <constraint firstItem="bLR-xk-OvU" firstAttribute="top" secondItem="nyX-fG-tav" secondAttribute="bottom" constant="30" id="PvW-9y-t6v"/>
+                            <constraint firstItem="bLR-xk-OvU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nyX-fG-tav" secondAttribute="bottom" constant="25" id="PvW-9y-t6v"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -46,6 +50,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="filterBtn" destination="bLR-xk-OvU" id="E25-eA-Bdf"/>
+                        <outlet property="imageToFilter" destination="nyX-fG-tav" id="CdK-dO-dbH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -63,16 +71,30 @@
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lIh-44-Dgu">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCollectionViewCell" id="lIh-44-Dgu" customClass="PhotoCollectionViewCell" customModule="CameraFilter" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GdQ-8V-6Te">
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ssx-UA-evD">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ssx-UA-evD" firstAttribute="height" secondItem="GdQ-8V-6Te" secondAttribute="height" id="5Mw-2I-Aon"/>
+                                        <constraint firstItem="ssx-UA-evD" firstAttribute="width" secondItem="GdQ-8V-6Te" secondAttribute="width" id="LS5-xG-q2D"/>
+                                        <constraint firstItem="ssx-UA-evD" firstAttribute="top" secondItem="GdQ-8V-6Te" secondAttribute="top" id="TKr-If-ci1"/>
+                                        <constraint firstItem="ssx-UA-evD" firstAttribute="leading" secondItem="GdQ-8V-6Te" secondAttribute="leading" id="jPu-Gw-NWA"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="cellImageview" destination="ssx-UA-evD" id="mik-CH-vF6"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

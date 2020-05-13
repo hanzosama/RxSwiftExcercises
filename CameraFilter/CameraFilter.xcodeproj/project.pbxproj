@@ -14,6 +14,8 @@
 		AF9441D8246C5CE400491D15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9441D7246C5CE400491D15 /* Assets.xcassets */; };
 		AF9441DB246C5CE400491D15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9441D9246C5CE400491D15 /* LaunchScreen.storyboard */; };
 		AF9441E3246C628800491D15 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9441E2246C628800491D15 /* PhotosCollectionViewController.swift */; };
+		AF9441E5246C686300491D15 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9441E4246C686300491D15 /* PhotoCollectionViewCell.swift */; };
+		AF9441E7246C813200491D15 /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9441E6246C813200491D15 /* FilterService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		AF9441DA246C5CE400491D15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF9441DC246C5CE400491D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF9441E2246C628800491D15 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		AF9441E4246C686300491D15 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		AF9441E6246C813200491D15 /* FilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				AF9441CE246C5CDE00491D15 /* AppDelegate.swift */,
 				AF9441D2246C5CDE00491D15 /* ViewController.swift */,
 				AF9441E2246C628800491D15 /* PhotosCollectionViewController.swift */,
+				AF9441E4246C686300491D15 /* PhotoCollectionViewCell.swift */,
+				AF9441E6246C813200491D15 /* FilterService.swift */,
 				AF9441D4246C5CDE00491D15 /* Main.storyboard */,
 				AF9441D7246C5CE400491D15 /* Assets.xcassets */,
 				AF9441D9246C5CE400491D15 /* LaunchScreen.storyboard */,
@@ -207,6 +213,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF9441E3246C628800491D15 /* PhotosCollectionViewController.swift in Sources */,
+				AF9441E7246C813200491D15 /* FilterService.swift in Sources */,
+				AF9441E5246C686300491D15 /* PhotoCollectionViewCell.swift in Sources */,
 				AF9441D3246C5CDE00491D15 /* ViewController.swift in Sources */,
 				AF9441CF246C5CDE00491D15 /* AppDelegate.swift in Sources */,
 			);
