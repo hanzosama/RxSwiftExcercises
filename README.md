@@ -6,4 +6,6 @@ This repository contains some excercises related to the usage of RXSwift (RxCoco
 
 Here you'll find the list of the excercises and a vrief description about each of them:
 
-* [Camera Filter](https://github.com/hanzosama/RxSwiftExcercises/tree/master/CameraFilter): The target is to apply image filters on images selected form the device library.
+* [Camera Filter](https://github.com/hanzosama/RxSwiftExcercises/tree/master/CameraFilter): The target of this app is to apply image filters on images selected form the photos stored in the device gallery.
+
+* [Todo List](https://github.com/hanzosama/RxSwiftExcercises/tree/master/TodoList): This is a very basic todo list app. The purpose is to use the some transform & filter operators of RxSwift to list task based in those filters.
