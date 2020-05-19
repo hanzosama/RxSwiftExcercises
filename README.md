@@ -10,3 +10,4 @@ Here you'll find the list of the exercises and a brief description about each of
 
 * [Todo List](https://github.com/hanzosama/RxSwiftExcercises/tree/master/TodoList): This is a very basic todo list app. The purpose is to use the some transform & filter operators of RxSwift to list task based in those filters.
 * [News App](https://github.com/hanzosama/RxSwiftExcercises/tree/master/News%20App): This is a basic app to show news, using the free [News API](https://newsapi.org/) platform. The target is to see how to implement RxSwift/RxCococa to perform URLRequest in a different way.
+* [Weather app](https://github.com/hanzosama/RxSwiftExcercises/tree/master/Weather%20App):Tha target of this app is to show the RxCococa usage for the concepts of control property , control event and binding. This app uses the [Weather API](https://openweathermap.org/) in order to check the weather by city.
