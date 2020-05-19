@@ -4,7 +4,7 @@ This repository contains some excercises related to the usage of RXSwift (RxCoco
 
 ## Excercises
 
-Here you'll find the list of the excercises and a vrief description about each of them:
+Here you'll find the list of the excercises and a brief description about each of them:
 
 * [Camera Filter](https://github.com/hanzosama/RxSwiftExcercises/tree/master/CameraFilter): The target of this app is to apply image filters on images selected form the photos stored in the device gallery.
 
